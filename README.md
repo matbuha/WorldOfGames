@@ -7,5 +7,5 @@
   <a href="https://hub.docker.com/repositories">
     <img src="https://img.shields.io/badge/docker-red?style=for-the-badge&logo=docker&logoColor=white" alt="docker Badge"/>
   </a>
-  <img src="https://komarev.com/ghpvc/?username=matbuha&style=flat-square&color=blue" alt=""/>
 </div>
+  <img src="https://komarev.com/ghpvc/?username=matbuha&style=flat-square&color=blue" alt=""/>
