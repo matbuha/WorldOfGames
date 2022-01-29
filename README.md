@@ -19,6 +19,7 @@
 <div align="center">
   <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"/>
 </div>
+</div>
   ---
 
 ### :man_technologist: About Me :
@@ -31,6 +32,7 @@
 - :zap: In my free time, I learn more and more knowledge about DevOps to become a DevOps Master.
 
 - :mailbox:How to reach me: [![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ariel-ben-zikri-80a43b19b/)
+  [![facebook Badge](https://img.shields.io/badge/-facebook-blue?style=flat&logo=facebook&logoColor=white)](https://www.facebook.com/benzikri1/)
 ---
 
 ### :hammer_and_wrench: Languages and Tools :
