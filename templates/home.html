@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<html>
+<style>
+body {
+  background-image: url("https://zoomground.com/wp-content/uploads/2020/04/carl-raw-m3hn2Kn5Bns-unsplash-scaled.jpg");
+  background-color: #cccccc;
+  background-position: Fit;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<br />
+<br />
+<br />
+<table class="table">
+        <thead>
+          <tr>
+            <br />
+            <br />
+            <br />
+            <h3>The score is</h3>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>{{ name }}</td>
+            <td>{{ score }}</td>
+          </tr>
+        </tbody>
+      </table>
+</html>
+{% endblock content %}

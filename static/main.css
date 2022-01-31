@@ -1,0 +1,52 @@
+body {
+    background: radial-gradient(#b68d8d 0%, #7776b0 100%, #454566 100%);
+    color: #cfdeff;
+    margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #cfdeff;
+    text-shadow: 3px -5px 20px #ff0000, 5px 5px 10px rgba(0, 12, 255, 0.62);
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.bg-steel {
+  background-color: #37395e;
+  animation: myAnim 5s linear 1s infinite alternate both;
+
+
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: radial-gradient(#b68d8d 0%, #7776b0 100%, #454566 100%);
+  padding: 10px 20px;
+  border: 1px solid #695656;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
