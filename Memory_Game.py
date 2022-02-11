@@ -1,9 +1,9 @@
-import Live
 import random
 import time
+from Score import converting_to_score
 
 
-def memory_game():
+def memory_game(difficulty, name):
     print("Ready?")
     time.sleep(0.8)
     print("3....")
@@ -12,7 +12,7 @@ def memory_game():
     time.sleep(1)
     print("1..")
     time.sleep(1.1)
-    digits = Live.level_of_difficulty
+    digits = difficulty
     digits = int(digits)
 
     sequence = []
@@ -36,8 +36,7 @@ def memory_game():
             if num == sequence[i]:
                 print("Correct!\nYou are a genius!!")
                 print('it took you', count, "guesses!")
+                return count, converting_to_score(difficulty, name)
 
     except ValueError:
         print("Wrong!\nSorry you lost...\nit was: ")
-
-    return count

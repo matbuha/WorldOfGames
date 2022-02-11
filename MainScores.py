@@ -1,22 +1,27 @@
 from flask import Flask, render_template
-
-app = Flask(__name__)
-
-all_scores = open("TextFiles/Scores.txt").read().split()
-name = all_scores[0]
-score = all_scores[1]
+from e2e import test_scores_service
 
 
-@app.route("/")
-@app.route("/home")
-def home():
-    return render_template('home.html', score=score, name=name)
+def my_flask():
+    app = Flask(__name__)
 
+    all_scores = open("TextFiles/Scores.txt").read().split()
+    name = all_scores[0]
+    score = all_scores[1]
 
-@app.route("/about")
-def about():
-    return render_template('about.html', title='About')
+    @app.route("/")
+    @app.route("/home")
+    def home():
+        return render_template('home.html', score=score, name=name)
 
+    @app.route("/about")
+    def about():
+        return render_template('about.html', title='About')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    if __name__ == '__main__':
+        app.run(debug=True)
+        return test_scores_service()
+
+    else:
+        app.run()
+        return test_scores_service()

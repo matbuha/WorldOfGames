@@ -1,10 +1,10 @@
-import Live
 import random
 import time
+from Score import converting_to_score
 
 
-def guess_game():
-    num = Live.level_of_difficulty
+def guess_game(difficulty, name):
+    num = difficulty
     secret = random.randint(1, int(num))
     guess = None
     count = 0
@@ -20,7 +20,7 @@ def guess_game():
             time.sleep(1.1)
             print("You won!")
             print('it took you', count, "guesses!")
-            return count
+            return count, converting_to_score(difficulty, name)
 
         else:
             print("....")

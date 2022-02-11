@@ -1,11 +1,5 @@
-import Live
-import Utils
-import Score
+from Live import welcome, load_game
 
 
-Live.welcome()
-Live.load_game()
-Utils.choosing_game()
-Utils.converting_to_int()
-Score.add_score()
-# Score.convert_to_json()
+name = welcome()
+load_game(name)
