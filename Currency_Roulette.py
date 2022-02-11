@@ -1,11 +1,11 @@
 import datetime
 import random
-import Live
 import time
 from easy_exchange_rates import API
+from Score import converting_to_score
 
 
-def currency_roulette():
+def currency_roulette(difficulty, name):
     try:
         api = API()
         time_series = api.get_exchange_rates(
@@ -16,7 +16,7 @@ def currency_roulette():
         )
         get_money_interval = round(api.to_dataframe(time_series).values.__float__(), 2)
 
-        d = float(Live.level_of_difficulty)
+        d = float(difficulty)
         random_num = random.randint(1, 100)
         t = random_num / get_money_interval
 
@@ -37,7 +37,7 @@ def currency_roulette():
             time.sleep(1.1)
             print("Correct!\nYou won!!")
             print('it took you', count, "guesses!")
-            return count
+            return count, converting_to_score(difficulty, name)
 
     except ValueError:
         print("Wrong!\nStop mess with my software!\nyou lost! ")
