@@ -1,15 +1,13 @@
 from flask import Flask, render_template
-from e2e import test_scores_service
 
 
 def my_flask():
     app = Flask(__name__)
-
     all_scores = open("TextFiles/Scores.txt").read().split()
     name = all_scores[0]
     score = all_scores[1]
 
-    @app.route("/")
+    @app.route("/", methods=['GET'])
     @app.route("/home")
     def home():
         return render_template('home.html', score=score, name=name)
@@ -20,8 +18,6 @@ def my_flask():
 
     if __name__ == '__main__':
         app.run(debug=True)
-        return test_scores_service()
 
     else:
         app.run()
-        return test_scores_service()
