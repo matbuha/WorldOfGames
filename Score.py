@@ -12,7 +12,7 @@ def converting_to_score(difficulty, name):
 # this code writing "name" and "score" to TXT file.
         with open(SCORES_FILE_NAME, "w") as file:
             file.write(f'{name}  {score}\n')
-        return my_flask()
+        return file
 
     except FileNotFoundError as e:
         print(f"File NOT found! {e.args}")
