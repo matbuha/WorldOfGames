@@ -3,7 +3,7 @@ from flask import Flask, render_template
 
 def my_flask():
     app = Flask(__name__)
-    all_scores = open("TextFiles/Scores.txt").read().split()
+    all_scores = open("Scores.txt").read().split()
     name = all_scores[0]
     score = all_scores[1]
 
@@ -17,7 +17,7 @@ def my_flask():
         return render_template('about.html', title='About')
 
     if __name__ == '__main__':
-        app.run(debug=True)
+        app.run(debug=True, host='0.0.0.0', port=5001)
 
-    else:
-        app.run()
+
+my_flask()
