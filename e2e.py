@@ -15,6 +15,9 @@ def test_scores_service():
     return 0 < my_int_score < 1000
 
 
+test_scores_service()
+
+
 def main_function():
     """call our tests function. The main function will return -1 as an OS exit
     code if the tests failed and 0 if they passed."""
