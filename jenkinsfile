@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') { 
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'a0588011-0ff0-44cf-9a6d-20ced963a817', url: 'https://github.com/matbuha/WorldOfGames.git']]])
+            }
+        }
+        stage('Build') { 
+            steps {
+                bat 'docker build -t jenkinsdocker:latest .'
+            }
+        }
+        stage('Run') { 
+            steps {
+                bat 'docker compose up -d'
+            }
+        }
+        stage('Test') { 
+            steps {
+                git branch: 'main', credentialsId: 'a0588011-0ff0-44cf-9a6d-20ced963a817', url: 'https://github.com/matbuha/WorldOfGames.git'
+                bat 'python e2e.py'
+            }
+        }
+        stage('Finalize') { 
+            steps {
+                bat 'docker tag jenkinsdocker arielbenzikri/jenkinsdocker:latest'
+                bat 'docker push arielbenzikri/jenkinsdocker:latest'
+            }
+        }
+    }
+        post {
+            always {
+                bat 'docker logout'
+            }
+        }
+}
