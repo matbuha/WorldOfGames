@@ -1,4 +1,4 @@
-FROM python
+FROM python:3-alpine
 WORKDIR /MyDockFile
 RUN python --version
 COPY requierments.txt .
