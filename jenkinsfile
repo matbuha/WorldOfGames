@@ -19,6 +19,7 @@ pipeline {
         stage('Test') { 
             steps {
                 git branch: 'main', credentialsId: 'a0588011-0ff0-44cf-9a6d-20ced963a817', url: 'https://github.com/matbuha/WorldOfGames.git'
+                bat 'pip install selenium'
                 bat 'python e2e.py'
             }
         }
