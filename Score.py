@@ -1,5 +1,4 @@
 from Utils import SCORES_FILE_NAME, BAD_RETURN_CODE
-from MainScores import my_flask
 
 
 def converting_to_score(difficulty, name):
