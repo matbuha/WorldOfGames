@@ -23,7 +23,7 @@
   ---
 
 ### :man_technologist: About Me :
-  I am a DevOps Junior <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="50"> from Israel.
+  I am a DevOps Engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="50"> from Israel.
   
 - :telescope: I’m working as a DevOps Engineer and contributing to frontend and backend for building programs.
 
